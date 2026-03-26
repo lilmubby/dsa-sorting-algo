@@ -17,10 +17,16 @@ void insertion_sort(int arr[], int n);
 // It initializes an array of integers, calculates its length, calls the insertion_sort function to sort it, and then prints the sorted array
 int main() {
     // Initialize an array of integers to be sorted
-    int arr[] = {64, 34, 25};
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
 
     // Calculate the length of the array
     int lengthOfArray = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Original array: ");
+    for (int k = 0; k < lengthOfArray; k++) {
+        printf("%d ", arr[k]);
+    }
+    printf("\n");
 
     // Call the insertion_sort function to sort the array
     insertion_sort(arr, lengthOfArray);
