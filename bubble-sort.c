@@ -20,10 +20,17 @@ void bubble_sort(int arr[], int n);
 
 int main() {
     // Initialize an array of integers to be sorted
-    int arr[] = {64, 34, 25};
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
 
     // Calculate the length of the array
     int lenghtOfArray = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Original array: ");
+    for (int k = 0; k < lenghtOfArray; k++) {
+        printf("%d ", arr[k]);
+    }
+    printf("\n");
+
 
     // Call the bubble_sort function to sort the array
     bubble_sort(arr, lenghtOfArray);
@@ -61,12 +68,9 @@ void bubble_sort(int arr[], int lengthOfArray) {
     // Perform bubble sort algorithm
     // Outer loop to traverse through all elements
     for (i = 0; i < lengthOfArray-1; i++) {
-      printf("Pass %d: ", i);
-      
+      swapped = false; // reset swapped to false at the beginning of each pass
         // Inner loop to compare adjacent elements
         for (j = 0; j < lengthOfArray-i-1; j++) {
-          printf("J current: %d, value: %d \n", j, arr[j]);
-
             // check if the current element is greater than the next element
             if (arr[j] > arr[j+1]) {
               // if true, swap the elements
